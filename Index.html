@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Dog- Don't buy Dogs, Adopt them</title>
+</head>
+<style>
+    .menu-bar {
+        display: flex;
+        width: 100%;
+        height: 11vh;
+        background-color: #f2f2e8;
+    }
+
+    .menu-text a {
+        text-decoration: none;
+        font-size: 14px;
+        padding-left: 20px;
+        color: #28517f;
+        font-weight: bold;
+    }
+    .menu-text a:hover{
+        color: #f58e4b;
+        font-size:16px ;
+
+    }
+    .shop-products{
+        width: 18vw;
+        height: 7vh;
+        background-color: transparent;
+        border: 1.5px solid #a76018;
+        border-radius: 5px;
+        margin-left: 4vw;
+    }
+    .search-menubar-btn{
+        width: 8vw;
+        margin-left: 1.7vw;
+        height: 6vh;
+        background-color: #f58e4b;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+    }
+    .home-text button{
+        width: 14vw; 
+        height: 9vh; 
+        border:2px solid #d49f2c; 
+        background-color: transparent; 
+        border-radius: 40px; 
+        color: #d49f2c; 
+        font-size: 16px; 
+        font-weight: 500;
+        font-weight: bold;
+
+    }
+    .home-text button:hover{
+        background-color: #d49f2c;
+        color: #fff;
+    }
+
+    .search-button {
+        margin-left: 25px;
+    }
+    .search-btn:hover{
+        background-color: #fff;
+        color: #4c3504;
+
+    }
+
+    .menu-text ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 2vh;
+
+    }
+
+    .menu-text ul li {
+        font-family: Arial;
+        color: #28517f;
+        list-style: none;
+    }
+
+    .menu-text ul li select {
+        margin-left: 20px;
+        border: none;
+        color: #28517f;
+        background-color: transparent;
+        font-weight: bold;
+        width: 8vw;
+
+    }
+
+    .home-text h1 {
+        font-size: 60px;
+        color: #28517f;
+    }
+
+    .home-text {
+        display: flex;
+        margin-left: 8vw;
+    }
+
+    .home-text span {
+        color: #f58e4b;
+    }
+
+    .home-container {
+        width: 100%;
+        height: 80vh;
+        background-color: #f2f2e8;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: #f2f2e8;
+    }
+
+    .home-container1 {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(198, 146, 68, 0.5)), url(https://api.time.com/wp-content/uploads/2015/04/dog-child.jpg);
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80vh;
+        color: #fff;
+        margin-top: 2vh;
+        text-align: center;
+        padding-top: 15vh;
+        margin-top: 0px;
+        border-radius: 20px;
+    }
+
+    .home-container1 h1 {
+        font-size: 50px;
+        font-family: 'ui-monospace';
+    }
+
+    .home-container1 h3 {
+        font-size: 25px;
+    }
+
+    .placeholder-btn {
+        width: 45vw;
+        height: 9vh;
+        background-color: #fff;
+        border: 2px solid rgb(63, 39, 8);
+        border-radius: 10px;
+        font-size: 15px;
+        padding-left: 15px;
+
+    }
+
+    .search-btn {
+        width: 10vw;
+        height: 9vh;
+        background-color: #d49f2c;
+        color: #fff;
+        font-size: 15px;
+        border-radius: 25px;
+        border: 3px solid #61460b;
+        margin-top: 5vh;
+    }
+
+    .home-container2 {
+        width: 100%;
+        height: 80vh;
+        text-align: center;
+    }
+
+    .home-container2 h1 {
+        font-size: 38px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding-left: 7vw;
+        padding-right: 7vw;
+    }
+
+    .boxes {
+        display: flex;
+        gap: 170px;
+        margin-left: 10vw;
+        margin-top: 15vh;
+    }
+
+    .line {
+        width: 20vw;
+        height: 1vh;
+        background-color: #61460b;
+        margin-left: 38vw;
+        margin-top: 6vh;
+    }
+
+    .home-container3 {
+        width: 100%;
+        height: 150vh;
+        text-align: center;
+    }
+    .home-container3 h3{
+        font-size: 20px;
+        padding-top: 2vh;
+    }
+
+    .box1,
+    .box2 {
+        display: flex;
+        gap: 6vw;
+    }
+
+    .adoption-services,
+    .foster-programs,
+    .lost-found,
+    .v-care,
+    .donations,
+    .training {
+        width: 22vw;
+        height: 50vh;
+        border-radius: 20px;
+        background-color: #8b5836;
+        color: #fff;
+
+
+    }
+
+    .adoption-services,
+    .v-care {
+        margin-left: 10vw;
+    }
+
+    .box2 {
+        margin-top: 4vh;
+    }
+
+    .adoption-services,
+    .foster-programs,
+    .lost-found,
+    .v-care,
+    .donations,
+    .training,
+    a {
+        text-decoration: none;
+
+    }
+
+    .box1 {
+        padding-top: 4vh;
+    }
+
+    .home-container4 {
+        width: 100%;
+        height: 80vh;
+        text-align: center;
+        padding-top: 10vh;
+    }
+
+    .btn-sec-4 {
+        display: flex;
+        padding: 5vh 15vw 0vw 27vw;
+
+
+    }
+
+    .btn-sec-4 h4 {
+        border: 1px solid black;
+        border-radius: 50px;
+        padding: 15px;
+    }
+
+    .btn-sec-4 button {
+        width: 20vw;
+        height: 8vh;
+        border: 2.5px solid #edb337;
+        border-radius: 10px;
+    }
+    .btn-sec-4 button:hover{
+        background-color:#edb337;
+        color: #fff;
+    }
+    .main-holder button{
+        width: 12vw;
+        height: 9vh; 
+        margin-top: 4vh; 
+        border: 2px solid #edb337;
+        color: #edb337; 
+        font-size: 15px; 
+        background-color: transparent; 
+        border-radius: 30px;
+    }
+    .main-holder button:hover{
+        background-color: #edb337;
+        color: #fff;
+    }
+
+    .main-holder {
+        width: 100%;
+        height: 70vh;
+    }
+
+    .holder1 {
+        /* border: 1px solid black; */
+        width: 100%;
+        height: 135vh;
+        margin-bottom: 0px;
+    }
+    .services{
+        background-color: rgb(248, 238, 226);
+        margin-top: 0px;
+        text-align: center;
+        height: 90vh;
+    }
+
+    .holder4-stories {
+        display: flex;
+        gap: 4vw;
+        margin: 7vh 4vw 0 4vw;
+    }
+    .main-db-sec{
+        text-align: center;
+        height: 70vh;
+        margin-top: 0vw;
+    }
+    .dog-breeds-bg{
+        background-color: #f2f2e8;
+    }
+
+    .story1,
+    .story2,
+    .story3 {
+        /* border: 1px solid black; */
+        width: 27vw;
+        height: 80vh;
+        text-align: justify;
+        padding: 7vh 5vw 0 5vw;
+        font-family: cursive;
+        border-radius: 25px;
+        color: #fff;
+    }
+
+    .story1 {
+        background-image: linear-gradient(rgba(7, 7, 7, 0.8), rgba(138, 84, 4, 0.6)), url(https://templatekit.jegtheme.com/pawsnest/wp-content/uploads/sites/417/2023/10/man-and-his-dog-2021-08-27-10-46-27-utc-1.jpg);
+        background-size: cover;
+
+    }
+
+    .story2 {
+        background-image: linear-gradient(rgba(7, 7, 7, 0.8), rgba(138, 84, 4, 0.6)), url(https://templatekit.jegtheme.com/pawsnest/wp-content/uploads/sites/417/2023/10/pleasant-photo-about-taking-care-and-playing-with-2022-01-11-23-57-55-utc.jpg);
+        background-size: cover;
+    }
+
+    .story3 {
+        background-image: linear-gradient(rgba(7, 7, 7, 0.8), rgba(138, 84, 4, 0.6)), url(https://templatekit.jegtheme.com/pawsnest/wp-content/uploads/sites/417/2023/10/young-happy-man-hugging-dog-sitting-on-floor-2022-12-16-07-00-36-utc.jpg);
+        background-size: cover;
+    }
+    .main-holder{
+        display: flex;
+    }
+    .holder1{
+        display: flex;
+    }
+    .for-bg-about{
+        background-color: rgb(248, 238, 226);
+
+    }
+    .for-bg{
+        background-image: url(https://i.pinimg.com/564x/64/e8/b5/64e8b5b670e54e4983bc6fcc556c8451.jpg);
+        /* background-image: url(https://i.pinimg.com/564x/15/ea/f1/15eaf1a4b439a88466b0afdcf1dfd40b.jpg); */
+        background-repeat: no-repeat;
+        background-size: cover ;
+    }
+    .holder3{
+        height: 60vh;
+        text-align: center;
+        color: #fff;
+        padding-top: 5vh;
+    }
+    .holder3-boxes{
+        display: flex;
+        gap: 15vw;
+        margin-left: 10vw;
+        font-size: 20px;
+    }
+    .holder3-boxes h3:hover{
+        font-size: 30px;
+        cursor: pointer;
+
+    }
+    .holder3-boxes p{
+        color: #d49f2c;
+    }
+    .line2{
+        width: 18vw;
+        height: 1vh;
+        background-color:lightblue;
+        margin: 6vh 0 3vh 39vw;
+    }
+    .holder4{
+        height: 130vh;
+        text-align: center;
+        color: #fff;
+        margin-top: 0px;
+    }
+    .holder4 h3{
+        font-size: 40px;
+        padding-bottom: 7vh;
+    }
+    .hoder3-4-combo{
+        background-color:#032042 ;
+    }
+    .placeholder-btn2{
+        width: 25vw;
+        height: 8vh;
+        margin-top: 4vh;
+        background-color:#fff;
+        border: 2px solid #edb337;
+    }
+    .submit-btn{
+        height: 8vh;
+        width: 3vw;
+        font-size: large;
+        color: #fff;
+        background-color: #edb337;
+        border: none;
+    }
+    .breeds p{
+        font-size: 20px;
+        color: #28517f;
+        font-weight: bold;
+    }
+    .breeds button{
+        width: 8vw;
+        height: 6vh;
+        border-radius: 20px;
+        background-color: burlywood;
+        border: 2px solid rgb(100, 65, 20);
+
+    }
+    .breeds button:hover{
+        cursor:pointer;
+        background-color:#61460b;
+        color: #fff;
+    }
+    .faq-sec{
+        width: 80%;
+        height: 132vh;
+        margin: 7vh 0 0 10vw;
+        text-align:justify;
+        font-size: larger;
+    }
+    .heading{
+        margin: 5vh 0 8vh 0;
+    }
+    .questions-section {
+        display: grid;
+        grid-template-rows: repeat(6, 80px);
+        gap: 20px;
+    }
+    .question {
+        background-color:#032042;
+        padding: 20px;
+    }
+
+    .question-text {
+        color: #fff;
+        font-size: 1.3rem;
+        font-weight: 100;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .plus-icon {
+        font-size: 1.5rem;
+    }
+
+    .answer {
+        background-color:#78a5da;
+        height: auto;
+        display: none;
+        padding-left: 1vw;
+        color: black;
+        font-size: medium;
+    }
+    .question:hover+.answer {
+        display: block;
+    }
+    .breeds{
+        display: flex;
+        gap: 3vw;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: auto auto;
+        height: 180vh;
+    }
+
+    .golden-retriever, .dachshund, .pug, .beagle, .greatdane, .labrodar, .indian-pariah, .german-shephard{
+        width: 20vw;
+        height: 60vh;
+        /* border: 1px solid black; */
+        text-align: center;
+        border-radius: 10px;
+    }
+    .golden-retriever{
+        background-image: url(https://i.pinimg.com/474x/53/7e/de/537edec6774abfcdf1c525af0d4ac5e2.jpg);
+        background-size: cover;
+    }
+    .dachshund{
+        background-image: url(https://i.pinimg.com/564x/f7/82/bb/f782bb6e34ae040cdcb1734f99d40ba8.jpg);
+        background-size: cover;
+    }
+    .beagle{
+        background-image: url(https://i.pinimg.com/564x/de/76/d5/de76d51b2a98377c7c1f34bed35adc5b.jpg);
+        background-size: cover;
+    }
+    .greatdane{
+        background-image: url(https://i.pinimg.com/564x/c6/e4/67/c6e46738c8bb5893c4f85d2b2c4a89c6.jpg);
+        background-size: cover;
+    }
+    .pug{
+        background-image: url(https://i.pinimg.com/564x/1c/b3/c2/1cb3c2197f70ed8579c9b33f5897c15c.jpg);
+        background-size: cover;
+    }
+    .german-shephard{
+        background-image: url(https://i.pinimg.com/474x/b6/67/14/b667143861ed1542248dcf48b793ffc8.jpg);
+        background-size: cover;
+    }
+    .labrodar{
+        background-image: url(https://i.pinimg.com/474x/b4/32/fa/b432fa0e4e7f399b8050be5b4c6f7b33.jpg);
+        background-size: cover;
+    }
+    .indian-pariah{
+        background-image: url(https://i.pinimg.com/474x/24/41/0e/24410e2ce20a499cba1bc24e91bad43b.jpg);
+        background-size: cover;
+    }
+
+    .areas{
+        display: flex;
+        gap: 5vw;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto auto auto ;
+        grid-template-rows: auto auto;
+    }
+    .location-content{
+        text-align: center;
+        padding: 6vh 0 4vh 0;
+        font-size: 25px;
+        color: rgb(81, 80, 80);
+    }
+
+    .hyd, .bgl, .pune, .mumbai, .delhi, .chennai, .lucknow, .tvd{
+        width: 25vw;
+        height: 75vh;
+        text-align: center;
+        border-radius: 30px;
+    }
+
+    .hyd{
+        background-image: linear-gradient(rgba(29, 30, 30, 0.8), rgba(27, 28, 28, 0.6)),url(https://i.pinimg.com/474x/19/c5/77/19c577a3d98fe41c699df02278794a2e.jpg);
+        background-size: cover;
+    }
+
+    .delhi{
+        background-image:linear-gradient(rgba(29, 30, 30, 0.8), rgba(27, 28, 28, 0.6)), url(https://i.pinimg.com/474x/c1/94/e2/c194e2467b356eb9a64412754a7b99b2.jpg);
+        background-size: cover;
+    }
+    .mumbai{
+        background-image: linear-gradient(rgba(29, 30, 30, 0.8), rgba(27, 28, 28, 0.6)), url(https://i.pinimg.com/474x/2e/aa/92/2eaa92fae2e7df3e8b804e011cd85996.jpg);
+        background-size: cover;
+    }
+    .bgl{
+        background-image: linear-gradient(rgba(29, 30, 30, 0.8), rgba(27, 28, 28, 0.6)),url(https://i.pinimg.com/474x/a7/1c/b6/a71cb6ea0827ce6991db703bbd7dd2bd.jpg);
+        background-size: cover;
+    }
+    .pune{
+        background-image:linear-gradient(rgba(29, 30, 30, 0.8), rgba(27, 28, 28, 0.6)), url(https://i.pinimg.com/474x/a3/9d/31/a39d31c4e36872af4d45dfc79526555a.jpg);
+        background-size: cover;
+    }
+    .chennai{
+        background-image: linear-gradient(rgba(29, 30, 30, 0.8), rgba(27, 28, 28, 0.6)), url(https://i.pinimg.com/564x/ea/0a/a7/ea0aa743e388307f665674e1c82dc964.jpg);
+        background-size: cover;
+    }
+    .lucknow{
+        background-image: linear-gradient(rgba(29, 30, 30, 0.8), rgba(27, 28, 28, 0.6)), url(https://i.pinimg.com/564x/16/e5/92/16e59215d8f06927894e6553f84467dc.jpg);
+        background-size: cover;
+    }
+    .tvd{
+        background-image: linear-gradient(rgba(29, 30, 30, 0.8), rgba(27, 28, 28, 0.6)),url(https://i.pinimg.com/474x/45/cb/75/45cb75e50bf9b431c1949455618016b1.jpg);
+        background-size: cover;
+    }
+
+    .areas p{
+        font-size: 37px;
+        color: #fff;
+        margin: 20vh 4vw 5vh 4vw;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    .areas button{
+        width: 10vw;
+        height: 8vh;
+        border-radius: 30px;
+        background-color: #d49f2c;
+        border: none;
+    }
+    .areas button:hover{
+        background-color:#eadab8;
+        color: #7e5806;
+    }
+    .contact-section{
+        width: 100%;
+        height: 133vh;
+    }
+    .contact-content{
+        height: 40vh;
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        padding-top: 12vh;
+        background-image: linear-gradient(rgba(29, 30, 30, 0.8), rgba(161, 121, 34, 0.4)), url(contacts-bg.jpeg);
+        background-size: cover;
+        color: #fff;
+
+    }
+    .contact-details{
+        display: flex;
+    }
+    .our-details{
+        width: 40%;
+        margin: 7vh 5vw 0 5vw;
+        height: 65vh;
+        padding: 2vh 0 0 4vw;
+        background-color: #032042;
+        color: #fff;
+        border-radius: 30px;
+    }
+    .location, .mobile, .email{
+        display: flex;
+    }
+    .send-msg-sec button{
+        width: 12vw; 
+        height: 8vh; 
+        background-color:#edb337; 
+        margin-top: 7vh; 
+        border-radius: 30px; 
+        color: #fff; 
+        border: 2px solid #d49f2c;
+    }
+    .send-msg-sec button:hover{
+        background-color:#032042;
+    }
+    .footer-bar{
+        height: 10vh;
+        background-color: #01152b;
+        display: flex;
+        color: grey;
+        justify-content: space-around;
+    }
+
+</style>
+
+<body>
+    <div class="container">
+        <div class="menu-bar">
+            <img src="FurEver logo.jpeg" alt="" width="150vw" height="80vh"
+                style="padding-left: 25px; margin-right: 35px;">
+            <div class="menu-text">
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><select name=" " id="">
+                            <option value="">DOG BREEDS</option>
+                            <option value="">Golden Retriever</option>
+                            <option value="">Dachshund</option>
+                            <option value="">Beagle</option>
+                            <option value="">Great Dane</option>
+                            <option value="">Pug</option>
+                            <option value="">German Shephard</option>
+                            <option value="">Labrodar</option>
+                            <option value="">Rottweiler</option>
+                            <option value="">Indian Pariah</option>
+                        </select></li>
+                    <li><select name=" " id="">
+                            <option value="">LOCATION</option>
+                            <option value="">Hyderabad</option>
+                            <option value="">Delhi</option>
+                            <option value="">Mumbai</option>
+                            <option value="">Bangalore</option>
+                            <option value="">Pune</option>
+                            <option value="">Chennai</option>
+                            <option value="">Lucknow</option>
+                            <option value="">Trivendrum</option>
+                        </select></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">CONTACT US</a></li>
+                    <li>
+                        <form class="search-button" role="search">
+                            <input class="shop-products" type="search" placeholder="Shop Pet Products" aria-label="Search">
+                            <button class="search-menubar-btn" type="submit">Search</button>
+                        </form>
+                    </li>
+                </ul>
+
+            </div>
+
+        </div>
+        <section id="home">
+            <div class="home-container">
+                <div class="home-content">
+                    <div class="home-text">
+                        <div>
+                            <h1>Every Paw <br> Deserves a <br><span>Loving</span> Home</h1>
+                            <button >Get Started</button>
+                        </div>
+                        <img src="https://w0.peakpx.com/wallpaper/611/874/HD-wallpaper-border-collie-brown-dog-pets-human-friend-cute-animals-dogs-aussie.jpg"
+                            alt="" width="400vw" height="300vh" style="border-radius: 70px; margin: 9vh 0vw 0vw 15vw">
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="home-container1">
+                <h1>Find A Dog To Adopt</h1>
+                <h3>Start your Dog Adoption Journey with Our Free Dog Finder Tool</h3>
+                <div class="container1-btn">
+                    <form class="" role="search">
+                        <input class="placeholder-btn" type="search" placeholder="Find your new Furry Friend"
+                            aria-label="Search"><br>
+                        <button class="search-btn" type="submit">Search</button>
+                    </form>
+                </div>
+
+
+            </div>
+            <div class="for-bg">
+                <div class="home-container2">
+                    <h1>How to Adopt A Dog with Our Online Dog Adoption <br>Platform</h1>
+                    <div class="boxes">
+                        <div class="search">
+                            <img src="https://img.freepik.com/free-vector/pet-logo-design-paw-vector-animal-shop-business_53876-136741.jpg?w=2000"
+                                alt="" style="width: 70px; border-radius: 50px;">
+                            <h3>Search</h3>
+                            <p>Fill your details and click Enter</p>
+    
+                        </div>
+                        <div class="Choose">
+                            <img src="https://media.licdn.com/dms/image/C5603AQF04Wokr7ngFA/profile-displayphoto-shrink_800_800/0/1663647841200?e=2147483647&v=beta&t=pIMHFjb8HOim9Er1pk1LszDjJBue-M-lYv5kbOI0iNg"
+                                alt="" style="width: 70px; border-radius: 100px;">
+                            <h3>Choose</h3>
+                            <p>Choose the right dog for you and <br>Get all the necessary information</p>
+    
+                        </div>
+                        <div class="adopt">
+                            <img src="https://images.getpng.net/uploads/preview/watercolor-social-media-icons-30-1151641927807ermdeaff1j.webp"
+                                alt="" style="width: 70px; border-radius: 50px;">
+                            <h3>Adopt</h3>
+                            <p>Get in touch with the team and <br>adopt your new furry friend</p>
+    
+                        </div>
+                    </div>
+                    <div class="line">
+    
+                    </div>
+                </div>
+    
+                <div class="home-container3">
+                    <h1 style="font-size: 35px; padding-top:4vh ;">Helping Animals, Building Community</h1>
+                    <div class="help-box">
+                        <div class="box1">
+                            <div class="adoption-services">
+                                <h3>Adoption Services</h3>
+                                <p style="font-size: 16px; text-align: justify; padding: 15px 20px 0 20px;">We are passionate about ending pet homelessness and ensuring that every dog gets a second
+                                    chance at a happy life. Our team consists of caring volunteers who work tirelessly to
+                                    rescue, rehabilitate, and rehome dogs of all breeds and sizes.</p>
+                                <a href="#" style="color: #fff;">Learn More</a>
+    
+                            </div>
+                            <div class="foster-programs">
+                                <h3>Foster Programs</h3>
+                                <p style="font-size: 16px; text-align: justify; padding: 15px 20px 0 20px;">Foster programs provide a safe and loving environment for dogs to stay while they are
+                                    waiting to be adopted. This temporary care ensures that dogs are not kept in shelters,
+                                    which can be stressful for them.</p>
+                                <a href="#"  style="color: #fff;">Learn More</a>
+    
+                            </div>
+                            <div class="lost-found">
+                                <h3>Lost and Found</h3>
+                                <p style="font-size: 16px; text-align: justify; padding: 15px 20px 0 20px;">Our FurEver Homes organizations have a "Lost and Found" service to help reunite pets with
+                                    their owners. We often maintain a database of lost and found animals, making it easier
+                                    for families to search for their missing pets.</p>
+                                <a href="#"  style="color: #fff;">Learn More</a>
+    
+                            </div>
+                        </div>
+                        <div class="box2">
+                            <div class="v-care">
+                                <h3>Veterinary Care</h3>
+                                <p style="font-size: 16px; text-align: justify; padding: 15px 20px 0 20px;">Our experienced team of veterinarians and staff is committed to providing top-notch
+                                    veterinary care for dogs of all breeds and sizes.</p>
+                                <a href="#"  style="color: #fff;">Learn More</a>
+    
+                            </div>
+                            <div class="donations">
+                                <h3>Pet Donations</h3>
+                                <p style="font-size: 16px; text-align: justify; padding: 15px 20px 0 20px;"> Your generosity can have a profound impact on the well-being of animals and contribute
+                                    to the larger cause of promoting responsible pet ownership and reducing animal
+                                    homelessness.</p>
+                                <a href="#"  style="color: #fff;">Learn More</a>
+    
+                            </div>
+                            <div class="training">
+                                <h3>Behavioral Training</h3>
+                                <p style="font-size: 16px; text-align: justify; padding: 15px 20px 0 20px;">Behavioral training for dogs enhances the bond between pets and their owners, ensuring
+                                    that dogs are well-behaved, happy, and integrated members of the family. It</p>
+                                <a href="#"  style="color: #fff;">Learn More</a>
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-container4">
+                    <div>
+                        <h1 style="font-size: 33px;">Your Support, Their Second Chance at a Happier, Healthier Life</h1>
+                        <p style="padding: 4vh 10vw 3vh 10vw; font-size: 17px;">Every dog deserves a loving home, and
+                            you have the power to make a difference. When you adopt a
+                            dog from a shelter or rescue, you're not just getting a pet; you're giving a homeless dog a
+                            chance at a new life and a forever family.</p>
+                        <h3>"Choose to adopt, don't shop for your furry friend."</h3>
+                    </div>
+                    <div class="btn-sec-4">
+                        <button>Donate Now</button>
+                        <h4 style="margin: 0vh 1vw 0vh 1vw;">Or</h4>
+                        <button>Adopt Now</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+        <section id="about">
+            <div class="about-container">
+                <div class="main-holder">
+                    <img src="about-pic.jpg" alt="" width="410vw" height="350vh" style="padding: 5vh 10vw 0 6vw;">
+                    <div>
+                        <h1 style="color:#fbad02; font-weight: bold; font-size: 20px; padding-top: 5vh;">About Us</h1>
+                    <h2 style="padding-top: 5vh; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; color: #080808;">The Best for Your Pet!</h2>
+                    <h2 style="color: #545252;">Want a pet for your loved ones?</h2>
+                    <button >Apply Today</button>
+                    </div>
+
+                </div>
+                <div class="for-bg-about">
+                    <div class="holder1">
+                        <div>
+                            <h1 style="font-size: 50px; padding: 5vh 0 0 5vw; color: #332d5d;">Sheltering <span style="color: #b563a8;font-size: 60px;">Love,</span> <br>One <span style="color:#b563a8;font-size: 60px;">Paw</span> at a Time</h1>
+                            <p style=" font-size: 18px; padding: 2vh 5vw 4vh 5vw;">Spreading love and compassion to shelter dogs through adoption. It emphasizes the notion that
+                                each adoption is a heartwarming act of kindness, as every paw taken in from a shelter represents
+                                an opportunity to provide a loving and caring home for a deserving dog. By adopting a shelter
+                                dog, we not only change their lives but also enrich our own, one paw at a time. </p>
+                                <img src="https://media.glamourmagazine.co.uk/photos/6138aa2dd22f06d735f77943/16:9/w_2560%2Cc_limit/gettyimages-1162855470_sf.jpg"
+                                alt="" width="550vw" style=" border-radius: 30px; margin-left: 5vw;">
+                        </div>
+                        <div>
+                            <img src="https://w0.peakpx.com/wallpaper/38/16/HD-wallpaper-dog-cute-dogs-puppy-rainbow.jpg" alt=""
+                            width="350vw" style="margin: 30vh 5vw 0 10vw; border-radius: 30px; " height="560vh" >
+                        </div>
+                        <!-- <div>
+                            <h2>Our Generous Sponsors and Donors</h2>
+                        </div> -->
+                    </div>
+    
+                    <div class="services">
+                        <h3 style="font-size: 20px; color: #fbad02;">Our Services</h3>
+                        <h1 style="font-size: 30px;">Taking Care of Pets</h1>
+                        <img src="services.png" alt="" width="700vw" >
+    
+                    </div>
+                </div>
+
+                <div class="hoder3-4-combo">
+                    <div class="holder3">
+                        <h3 style="font-size: 50px;">Turning Compassion into Action</h3>
+                        <div class="holder3-boxes">
+                            <div class="rescue">
+                                <h3>12500+</h3>
+                                <p>Pets Successful Rescue</p>
+    
+                            </div>
+                            <div class="products">
+                                <h3>$7.8 million+</h3>
+                                <p>Food & Product Donations</p>
+    
+                            </div>
+                            <div class="volunteer">
+                                <h3>1500+</h3>
+                                <p>Dedicated Volunteer</p>
+    
+                            </div>
+                        </div>
+                        <div class="line2">
+
+                        </div>
+                    </div>
+    
+                    <div class="holder4">
+                        <h3>From Shelter to <span style="color: #f58e4b;">FurEver</span> <span style="color: #28517f;">Homes</span> Our Success Stories</h3>
+                        <div class="holder4-stories">
+                            <div class="story1">
+                                <p style="margin-top: 9vh;">"I had always dreamed of having a furry friend to share my life
+                                    with, and that dream came
+                                    true when I adopted Max from PawsNest. Max, a gentle and loving Labrador mix, stole my
+                                    heart the moment I saw him. His wagging tail and hopeful eyes told a story of resilience
+                                    and unwavering trust. Since that day, Max has been my faithful companion, bringing
+                                    boundless joy and love into my life."</p>
+    
+                            </div>
+                            <div class="story2">
+                                <p style="margin-top: 9vh;">"Two years ago, I adopted Luna, a shy and timid rescue cat, from
+                                    PawsNest. Luna had
+                                    experienced a difficult past, but her sweet disposition captured my heart. Over time,
+                                    Luna has blossomed into a confident and affectionate companion. Her purrs and playful
+                                    antics fill my home with warmth and laughter. Adopting Luna has taught me the profound
+                                    impact of second chances."</p>
+    
+                            </div>
+                            <div class="story3">
+                                <p style="margin-top: 9vh;">"When I first met Bella, she was a trembling ball of fur in the
+                                    corner of her kennel at
+                                    PawsNest. It was evident that she had experienced hardship, but her vulnerability
+                                    touched my soul. Adopting Bella was the best decision I ever made. Watching her
+                                    transform from a fearful pup into a confident and loving family member has been a
+                                    remarkable journey. "</p>
+    
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="dog-breeds">
+            <div class="dog-breeds-bg">
+                <div class="main-db-sec">
+                    <h1 style="font-size: 30px; font-family:sans-serif; padding-top: 7vh;">Discover Your Future Family Member</h1>
+                    <h5>FIND YOUR PERFECT</h5>
+                    <h1>Dog Breed</h1>
+                    <h4>Choose Your New Furry Friend from Our list of dog breeds. Adopt the Perfect Dog Breed for You based
+                        on characteristics and Temperament.</h4>
+                    <form class="search-button" role="search">
+                        <input class="placeholder-btn2" type="search" placeholder="Dog Breed Name" aria-label="Search">
+                        <button class="submit-btn" type="submit">></button>
+                    </form>
+                </div>
+                <div class="breeds">
+                    <div>
+                        <div class="golden-retriever">
+                        </div>
+                        <div>
+                            <p>Golden-Retriever</p>
+                            <button>View Puppies</button>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="dachshund">
+                        </div>
+                        <div>
+                            <p>Dachshund</p>
+                            <button>View Puppies</button>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <div class="beagle">
+                        </div>
+                        <div>
+                            <p>Beagle</p>
+                            <button>View Puppies</button>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="greatdane">
+                        </div>
+                        <div>
+                            <p>Great Dane</p>
+                            <button>View Puppies</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pug">
+                        </div>
+                        <div>
+                            <p>Pug</p>
+                            <button>View Puppies</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="german-shephard">
+                        </div>
+                        <div>
+                            <p>German shephard</p>
+                            <button>View Puppies</button>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="labrodar">
+                        </div>
+                        <div>
+                            <p>Labrodar</p>
+                            <button>View Puppies</button>
+                        </div>
+                    </div>
+    
+                    <div>
+                        <div class="indian-pariah">
+                        </div>
+                        <div>
+                            <p>Indian Pariah</p>
+                            <button>View Puppies</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="location">
+            <div class="location-content">
+                <h1>Find Your New Furry Friend in Your Neighborhood</h1>
+            </div>
+
+            <div class="areas">
+                <div class="hyd">
+                    <p>Dogs for Adoption in Hyderabad</p>
+                    <button>Adopt Now</button>
+                </div>
+                <div class="delhi">
+                    <p>Dogs for Adoption in Delhi</p>
+                    <button>Adopt Now</button>
+                </div>
+
+                <div class="mumbai">
+                    <p>Dogs for Adoption in Mumbai</p>
+                    <button>Adopt Now</button>
+                </div>
+
+                <div class="bgl">
+                    <p>Dogs for Adoption in Bangalore</p>
+                    <button>Adopt Now</button>
+                </div>
+
+                <div class="pune">
+                    <p>Dogs for Adoption in Pune</p>
+                    <button>Adopt Now</button>
+                </div>
+
+                <div class="chennai">
+                    <p>Dogs for Adoption in Chennai</p>
+                    <button>Adopt Now</button>
+                </div>
+
+                <div class="lucknow">
+                    <p>Dogs for Adoption in Lucknow</p>
+                    <button>Adopt Now</button>
+                </div>
+
+                <div class="tvd">
+                    <p>Dogs for Adoption in Trivendrum</p>
+                    <button>Adopt Now</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <div class="faq-sec">
+                <div class="faq-heading">
+                    <h1 class="heading">Freaquently Asked Questions</h1>
+                </div>
+                <div class="questions-section">
+                    <div class="question">
+                        <div class="question-text">
+                            <span>How can I adopt a pet from your shelter?</span>
+                            <span class="plus-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <p>Visit the shelter, meet the animals, and complete an adoption application. Spend time with
+                            the pets you're interested in, ask questions, and be prepared for a home visit or reference
+                            check.</p>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text">
+                            <span>What are the adoption fees, and what do they include?</span>
+                            <span class="plus-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <p> While the adoption fee is free, the services typically included, such as
+                            spaying/neutering, vaccinations, and microchipping, are still provided. This is a wonderful
+                            opportunity to give a loving home to a pet in need without the financial barrier of an
+                            adoption fee. It's a win-win situation for both the pet and the adopter, as it allows more
+                            animals to find caring homes.</p>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text">
+                            <span>Do you offer pet training or behavioral support after adoption?</span>
+                            <span class="plus-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <p>These services may include training classes, resource materials, behavior helplines,
+                            consultations with experts, and even follow-up visits to ensure a smooth transition for both
+                            the pet and the new owner</p>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text">
+                            <span>How can I become a volunteer at your shelter?</span>
+                            <span class="plus-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <p>
+                            Becoming a volunteer at a pet shelter is a wonderful way to make a positive impact on the
+                            lives of dogs in need.Your time and dedication can make a significant difference in
+                            providing care and love to shelter animals.</p>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text">
+                            <span>How are the donated funds used by your shelter?</span>
+                            <span class="plus-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <p>These funds often go toward the daily care of animals, including medical care, feeding, and
+                            routine check-ups. Shelter maintenance, adoption programs, and outreach efforts to find
+                            forever homes for animals are also common beneficiaries of donations.</p>
+                    </div>
+
+                    <div class="question">
+                        <div class="question-text">
+                            <span>What should I feed my newly adopted pet?</span>
+                            <span class="plus-icon">+</span>
+                        </div>
+                    </div>
+                    <div class="answer">
+                        <p>Feeding your newly adopted pet requires attention to their species, age, and size. If you
+                            adopted your pet from a shelter or rescue, consult with them for initial dietary
+                            recommendations.</p>
+                    </div>
+                    </div>
+
+
+                </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-section">
+                <div class="contact-content">
+                    <h1>Get in touch with us today</h1>
+                </div>
+                <div class="contact-details">
+                    <div class="our-details">
+                        <h3 style="font-size:x-large;">Contact Information</h3>
+                        <div class="location">
+                            <img src="location-icon.jpeg" alt="" width="50px" height="50vh" style="border-radius: 50px;">
+                            <h4 style="margin: 2vh 0 4vh 3vw;">Our Location <br> Gachibowli, Hyderabad</h4>
+                        </div>
+                        <div class="mobile">
+                            <img src="https://www.pngkey.com/png/full/857-8579231_phone-icon-phone-icon-png-yellow.png" alt="" width="50px" height="50vh" style="border-radius: 50px;">
+                            <h4 style="margin: 2vh 0 4vh 3vw;">Mobile Number <br> 3333300000, 99998888777</h4>
+                        </div>
+                        <div class="email">
+                            <img src="https://icones.pro/wp-content/uploads/2021/05/icones-de-messagerie-jaune.png" alt="" width="50px" height="50vh" style="border-radius: 50px;">
+                            <h4 style="margin: 2vh 0 4vh 3vw;">Our Email <br> fureverhomes@gmail.com</h4>
+                        </div>
+                    </div>
+                    <div class="details-to-be-filled">
+                        <h3 style="font-size: 25px; padding-top: 4vh;">Send a Message</h3>
+                        <input type="text" placeholder="Your Name" style="width: 18vw; height: 6vh;">
+                        <input type="mail" placeholder="Your email address" style="width: 18vw; height: 6vh;"><br><br>
+                        <input type="text" placeholder="Write your Message" style="width: 37vw; height: 28vh;">
+                        <div class="send-msg-sec"><button>Send Message</button></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="footer">
+            <div class="footer-bar">
+                <p>FurEver Homes</p>
+                <p>Emergency: 123-456</p>
+
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
